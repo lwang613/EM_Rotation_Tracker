@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Submit health clearance forms",
+    "category": "Vaccinations & Health",
+    "due": "2025-09-01",
+    "notes": "Include TB test, flu shot record",
+    "completed": false,
+    "completed_date": null
+  },
+  {
+    "id": 2,
+    "title": "Sign rotation agreement / contract",
+    "category": "Paperwork",
+    "due": "2025-08-25",
+    "notes": "Get supervisor signature too",
+    "completed": true,
+    "completed_date": "2026-03-03"
+  },
+  {
+    "id": 3,
+    "title": "Schedule mid-rotation evaluation",
+    "category": "Evaluations",
+    "due": "2025-09-15",
+    "notes": "",
+    "completed": false,
+    "completed_date": null
+  },
+  {
+    "id": 4,
+    "title": "Log first week patient encounters",
+    "category": "Documentation",
+    "due": "2025-09-08",
+    "notes": "Use the SOAP note template",
+    "completed": false,
+    "completed_date": null
+  },
+  {
+    "id": 5,
+    "title": "Confirm schedule with preceptor",
+    "category": "Scheduling",
+    "due": "2025-08-28",
+    "notes": "",
+    "completed": false,
+    "completed_date": null
+  },
+  {
+    "id": 6,
+    "title": "Complete final rotation evaluation",
+    "category": "Evaluations",
+    "due": "2025-10-01",
+    "notes": "Both self-eval and preceptor",
+    "completed": false,
+    "completed_date": null
+  }
+]
