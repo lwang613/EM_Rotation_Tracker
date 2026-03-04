@@ -615,13 +615,14 @@
     "id": 203,
     "title": "Foley Catheter Placement",
     "category": "Required Clinical Skills",
-    "completed": false,
+    "completed": true,
     "subtasks": [
       {
         "label": "Log in One45",
-        "done": false
+        "done": true
       }
-    ]
+    ],
+    "completed_date": "2026-03-04"
   },
   {
     "id": 204,
