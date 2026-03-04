@@ -355,7 +355,7 @@
     "subtasks": [
       {
         "label": "Pre-test \u2192 Canvas",
-        "done": false
+        "done": true
       },
       {
         "label": "Attend lab",
