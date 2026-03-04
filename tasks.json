@@ -1,243 +1,678 @@
 [
   {
     "id": 1,
-    "title": "Attend Orientation",
-    "category": "Administrative",
-    "platform": "In-Person",
-    "location": "TBD — check with coordinator",
-    "due": null,
-    "notes": "Pick up orientation packet. CDM sheets and attendance log will be printed for you.",
+    "title": "Clinical Shift 1",
+    "category": "Clinical Shifts",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": true
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": true
+      }
+    ]
   },
   {
     "id": 2,
-    "title": "Upload Orientation Packet to Canvas",
-    "category": "Administrative",
-    "platform": "Canvas",
-    "location": "Canvas \u2192 Assignments",
-    "due": null,
-    "notes": "Combine all orientation documents into a single PDF. Upload at end of rotation. If shelf is after rotation, email coordinator attendance log + CDM sheets after last shift.",
+    "title": "Clinical Shift 2",
+    "category": "Clinical Shifts",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
   },
   {
     "id": 3,
-    "title": "Nursing Shift",
+    "title": "Clinical Shift 3",
     "category": "Clinical Shifts",
-    "platform": "In-Person",
-    "location": "Nueces Conference Room, UH1 \u2014 6:45am sharp",
-    "due": null,
-    "notes": "Report to Nueces Conference Room. PC charge will assign you to a nurse. Tell them you are reporting for your nursing shift.",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
   },
   {
     "id": 4,
-    "title": "Clinical Shifts in ED",
+    "title": "Clinical Shift 4",
     "category": "Clinical Shifts",
-    "platform": "In-Person",
-    "location": "Emergency Department",
-    "due": null,
-    "notes": "Arrive on time. On Wednesdays with Grand Rounds: leave shift at 1pm to keep 10-hour break and avoid duty hour violations.",
-    "target": 10,
-    "count": 0,
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
   },
   {
     "id": 5,
-    "title": "Clinical Decision Making Worksheets",
-    "category": "Per-Shift Tasks",
-    "platform": "Paper",
-    "location": "In ED \u2014 fill out at end of each shift",
-    "due": null,
-    "notes": "Attending SIGNATURE REQUIRED as proof of attendance. If unable to get signature, notify coordinator ASAP. Compile all sheets for end-of-rotation upload.",
-    "target": 10,
-    "count": 0,
+    "title": "Clinical Shift 5",
+    "category": "Clinical Shifts",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
   },
   {
     "id": 6,
-    "title": "Shift Card Evaluations",
-    "category": "Per-Shift Tasks",
-    "platform": "One45",
-    "location": "One45 \u2192 To Do\u2019s \u2014 self-send eval link per shift",
-    "due": null,
-    "notes": "Assign each shift card to the attending you worked with. Contact coordinator if issues sending evals. Need 10 total at end of rotation.",
-    "target": 10,
-    "count": 0,
+    "title": "Clinical Shift 6",
+    "category": "Clinical Shifts",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
   },
   {
     "id": 7,
-    "title": "Log Clinical Encounters & Skills",
-    "category": "Per-Shift Tasks",
-    "platform": "One45",
-    "location": "One45 \u2192 eDossier \u2192 PI/Procedure Log \u2192 Create New Log",
-    "due": null,
-    "notes": "Enter required procedures/encounters for each shift date. SIM skills: log as Faculty \u201cDolson\u201d, M, W, Adult, OP, Virtual. Complete EM Eval 1 and EM Eval 2.",
-    "target": 10,
-    "count": 0,
+    "title": "Clinical Shift 7",
+    "category": "Clinical Shifts",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
   },
   {
     "id": 8,
-    "title": "Mid-Rotation Quiz",
-    "category": "Evaluations",
-    "platform": "Canvas",
-    "location": "Canvas \u2192 Quizzes",
-    "due": null,
-    "notes": "2nd Friday of rotation. 15-question quiz. Results and feedback from residents/faculty will be sent to you by the coordinator.",
+    "title": "Clinical Shift 8",
+    "category": "Clinical Shifts",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
   },
   {
     "id": 9,
-    "title": "EM Resident Evaluations",
-    "category": "Evaluations",
-    "platform": "One45",
-    "location": "One45 \u2192 To-Do\u2019s \u2192 EM Resident Evaluation",
-    "due": null,
-    "notes": "Choose 2 residents you worked with during the rotation. Ask them to complete the evaluation of your performance before rotation ends.",
-    "target": 2,
-    "count": 0,
+    "title": "Clinical Shift 9",
+    "category": "Clinical Shifts",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
   },
   {
     "id": 10,
-    "title": "MSH E-FAST US Didactic Eval Form",
-    "category": "Evaluations",
-    "platform": "Canvas",
-    "location": "Canvas \u2192 Quizzes",
-    "due": null,
-    "notes": "Complete before rotation ends.",
+    "title": "Clinical Shift 10",
+    "category": "Clinical Shifts",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
   },
   {
     "id": 11,
-    "title": "SIM Session Evaluation",
-    "category": "Evaluations",
-    "platform": "Canvas",
-    "location": "Canvas \u2192 Quizzes",
-    "due": null,
-    "notes": "Complete before rotation ends.",
+    "title": "Nursing Shift",
+    "category": "Clinical Shifts",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend nursing shift",
+        "done": false
+      },
+      {
+        "label": "Vital signs assessment",
+        "done": false
+      },
+      {
+        "label": "Nursing Shift Eval Card \u2192 Canvas",
+        "done": false
+      }
+    ]
   },
   {
     "id": 12,
-    "title": "Procedure/Suture Skills Evaluation",
-    "category": "Evaluations",
-    "platform": "Canvas",
-    "location": "Canvas \u2192 Quizzes",
-    "due": null,
-    "notes": "Complete before rotation ends.",
+    "title": "Grand Rounds 1",
+    "category": "Didactics & Sessions",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
   },
   {
     "id": 13,
-    "title": "Attend Grand Rounds & Didactics",
-    "category": "Didactics & Exams",
-    "platform": "In-Person",
-    "location": "In-person, Wednesdays \u2014 check Canvas \u2192 Announcements",
-    "due": null,
-    "notes": "Grand Rounds and Didactics are both on Wednesdays. Coordinator posts schedule to Canvas Announcements. You only attend select Grand Rounds throughout the rotation.",
+    "title": "Grand Rounds 2",
+    "category": "Didactics & Sessions",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
   },
   {
     "id": 14,
-    "title": "US FAST Lab Pre-Survey",
-    "category": "Labs & Skills",
-    "platform": "Canvas",
-    "location": "Canvas \u2192 Assignments",
-    "due": null,
-    "notes": "Complete BEFORE the Ultrasound IV FAST Lab session. Survey remains open until the last day of rotation.",
+    "title": "Grand Rounds 3",
+    "category": "Didactics & Sessions",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
   },
   {
     "id": 15,
-    "title": "Ultrasound IV FAST Lab",
-    "category": "Labs & Skills",
-    "platform": "In-Person",
-    "location": "Ultrasound Lab \u2014 DEM Suite 41GL",
-    "due": null,
-    "notes": "Students scan each other (no standardized patients). Bring stethoscope. Assigned to one of two groups by coordinator.",
+    "title": "Didactics Session 1",
+    "category": "Didactics & Sessions",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
   },
   {
     "id": 16,
-    "title": "US FAST Lab Post-Survey",
-    "category": "Labs & Skills",
-    "platform": "Canvas",
-    "location": "Canvas \u2192 Assignments",
-    "due": null,
-    "notes": "Complete AFTER the Ultrasound IV FAST Lab session. Open until last day of rotation.",
+    "title": "Didactics Session 2",
+    "category": "Didactics & Sessions",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
   },
   {
     "id": 17,
-    "title": "Simulation Lab Session",
-    "category": "Labs & Skills",
-    "platform": "In-Person",
-    "location": "Simulation Lab \u2014 check coordinator for location",
-    "due": null,
-    "notes": "BRING YOUR STETHOSCOPE. Split into two groups; attend 1 sim lab session.",
+    "title": "Didactics Session 3",
+    "category": "Didactics & Sessions",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
   },
   {
     "id": 18,
-    "title": "Synthesis Shock Session",
-    "category": "Labs & Skills",
-    "platform": "In-Person",
-    "location": "Check coordinator for location/time",
-    "due": null,
-    "notes": "Split into two groups; attend 1 Synthesis Shock (Syn) session.",
+    "title": "Didactics Session 4",
+    "category": "Didactics & Sessions",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
   },
   {
     "id": 19,
-    "title": "EM History Taking Direct Observation",
-    "category": "Labs & Skills",
-    "platform": "In-Person",
-    "location": "In ED \u2014 template printed for you at orientation",
-    "due": null,
-    "notes": "Perform an observed history in the ED. Template is in Canvas and will be printed on the day of orientation.",
+    "title": "Synthesis Shock",
+    "category": "Didactics & Sessions",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend session",
+        "done": false
+      }
+    ]
   },
   {
     "id": 20,
-    "title": "NBME Shelf Exam Review",
-    "category": "Didactics & Exams",
-    "platform": "In-Person",
-    "location": "TBD \u2014 8:00am to 10:00am",
-    "due": null,
-    "notes": "Thursday before the shelf exam. 8am\u201310am.",
+    "title": "Simulation Lab",
+    "category": "Labs & Skills",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend sim lab",
+        "done": false
+      },
+      {
+        "label": "Student Eval \u2192 Canvas",
+        "done": false
+      }
+    ]
   },
   {
     "id": 21,
-    "title": "NBME EM Shelf Exam",
-    "category": "Didactics & Exams",
-    "platform": "In-Person",
-    "location": "Testing Center",
-    "due": null,
-    "notes": "Last Friday of rotation. Must score 64 points or better to pass EMED 3005. Class of 2025.",
+    "title": "Procedure / Suture Lab",
+    "category": "Labs & Skills",
     "completed": false,
-    "completed_date": null
+    "subtasks": [
+      {
+        "label": "Attend lab",
+        "done": false
+      },
+      {
+        "label": "Canvas Eval",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Ultrasound FAST Lab",
+    "category": "Labs & Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Pre-test \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Attend lab",
+        "done": false
+      },
+      {
+        "label": "Post-test \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Canvas Eval",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Direct Observation \u2014 History Taking",
+    "category": "Labs & Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Perform observed history in ED",
+        "done": true
+      },
+      {
+        "label": "Attending fills out form",
+        "done": false
+      },
+      {
+        "label": "Upload form \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "One45 form",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "EM Resident Evaluation 1",
+    "category": "Evaluations & Assessments",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Send eval in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "EM Resident Evaluation 2",
+    "category": "Evaluations & Assessments",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Send eval in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Mid-Rotation Quiz",
+    "category": "Evaluations & Assessments",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Complete quiz \u2192 Canvas",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Shelf Exam Review",
+    "category": "Evaluations & Assessments",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend review session",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "NBME EM Shelf Exam",
+    "category": "Evaluations & Assessments",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Take exam",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "title": "Abdominal Pain",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "title": "Altered Mental Status",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "title": "Chest Pain",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "title": "Gastrointestinal Bleeding",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "title": "Headache",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "title": "Liver Failure / Severe Biliary Disease",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "title": "Poisoning / Toxic Ingestion",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "title": "Psychiatric Emergency",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "title": "Shock",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "title": "Shortness of Breath",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "title": "Central Venous Line Placement",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "title": "EKG Acquisition",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "title": "Endotracheal Intubation",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "title": "Foley Catheter Placement",
+    "category": "Required Clinical Skills",
+    "completed": true,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": true
+      }
+    ],
+    "completed_date": "2026-03-04"
+  },
+  {
+    "id": 204,
+    "title": "Fracture Reduction / Splint",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "title": "Intravenous Line Placement",
+    "category": "Required Clinical Skills",
+    "completed": true,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": true
+      }
+    ],
+    "completed_date": "2026-03-04"
+  },
+  {
+    "id": 206,
+    "title": "Simple Laceration Repair",
+    "category": "Required Clinical Skills",
+    "completed": true,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": true
+      }
+    ],
+    "completed_date": "2026-03-04"
+  },
+  {
+    "id": 207,
+    "title": "Ultrasound-Guided IV Line Placement",
+    "category": "Required Clinical Skills",
+    "completed": true,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": true
+      }
+    ],
+    "completed_date": "2026-03-04"
   }
 ]
