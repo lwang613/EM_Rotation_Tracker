@@ -597,8 +597,10 @@ class MainWindow(QMainWindow):
             toggle_btn = QPushButton()
             toggle_btn.setObjectName("cat_toggle")
             toggle_btn.setCursor(Qt.CursorShape.PointingHandCursor)
-            # Ensure all category headers use a consistent, tall-enough height
-            toggle_btn.setFixedHeight(48)
+            # Use a minimum height so all containers look consistent,
+            # but allow them to grow vertically if the category name
+            # needs to wrap to a second line.
+            toggle_btn.setMinimumHeight(48)
 
             btn_layout = QHBoxLayout(toggle_btn)
             btn_layout.setContentsMargins(12, 8, 12, 8)
@@ -617,12 +619,15 @@ class MainWindow(QMainWindow):
 
             cat_label = QLabel(cat.upper())
             cat_label.setObjectName("cat_header")
+            cat_label.setWordWrap(True)
+            cat_label.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
             btn_layout.addWidget(cat_label)
 
             btn_layout.addStretch()
 
             count_label = QLabel(f"{d}/{t}")
             count_label.setObjectName("cat_count")
+            count_label.setSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
             btn_layout.addWidget(count_label)
 
             cat_key = key  # capture for lambda
