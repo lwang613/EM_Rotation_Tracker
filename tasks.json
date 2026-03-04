@@ -640,13 +640,14 @@
     "id": 205,
     "title": "Intravenous Line Placement",
     "category": "Required Clinical Skills",
-    "completed": false,
+    "completed": true,
     "subtasks": [
       {
         "label": "Log in One45",
-        "done": false
+        "done": true
       }
-    ]
+    ],
+    "completed_date": "2026-03-04"
   },
   {
     "id": 206,
