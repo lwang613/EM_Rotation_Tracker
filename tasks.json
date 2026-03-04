@@ -7,7 +7,7 @@
     "subtasks": [
       {
         "label": "Attend shift",
-        "done": false
+        "done": true
       },
       {
         "label": "CDM Worksheet \u2192 Canvas",
