@@ -351,7 +351,7 @@
     "id": 22,
     "title": "Ultrasound FAST Lab",
     "category": "Labs & Skills",
-    "completed": false,
+    "completed": true,
     "subtasks": [
       {
         "label": "Pre-test \u2192 Canvas",
@@ -367,9 +367,10 @@
       },
       {
         "label": "Canvas Eval",
-        "done": false
+        "done": true
       }
-    ]
+    ],
+    "completed_date": "2026-03-04"
   },
   {
     "id": 23,
