@@ -417,7 +417,10 @@ class MainWindow(QMainWindow):
         header_outer.setContentsMargins(0, 0, 0, 0)
         header_outer.addStretch()
         header_inner = QWidget()
-        header_inner.setMaximumWidth(720)
+        # Allow a bit more horizontal space so long category names
+        # and labels are not visually cut off while keeping a
+        # consistent card width across the layout.
+        header_inner.setMaximumWidth(960)
         header_layout = QVBoxLayout(header_inner)
         header_layout.setContentsMargins(32, 24, 32, 0)
         header_layout.setSpacing(4)
@@ -566,7 +569,9 @@ class MainWindow(QMainWindow):
         container_outer.setContentsMargins(0, 0, 0, 0)
         container_outer.addStretch()
         content_inner = QWidget()
-        content_inner.setMaximumWidth(720)
+        # Match header width so category containers have enough
+        # horizontal room for longer names without truncation.
+        content_inner.setMaximumWidth(960)
         layout = QVBoxLayout(content_inner)
         layout.setContentsMargins(32, 20, 32, 32)
         layout.setSpacing(8)
@@ -592,10 +597,11 @@ class MainWindow(QMainWindow):
             toggle_btn = QPushButton()
             toggle_btn.setObjectName("cat_toggle")
             toggle_btn.setCursor(Qt.CursorShape.PointingHandCursor)
-            toggle_btn.setFixedHeight(42)
+            # Ensure all category headers use a consistent, tall-enough height
+            toggle_btn.setFixedHeight(48)
 
             btn_layout = QHBoxLayout(toggle_btn)
-            btn_layout.setContentsMargins(12, 0, 12, 0)
+            btn_layout.setContentsMargins(12, 8, 12, 8)
             btn_layout.setSpacing(8)
 
             chevron = QLabel("\u25B6" if is_collapsed else "\u25BC")
@@ -847,6 +853,33 @@ class MainWindow(QMainWindow):
                 more = QLabel(f"   + {len(rec['reminders']) - 6} more")
                 more.setObjectName("side_shift_count")
                 layout.addWidget(more)
+
+        # ── Quick links / resources ──
+        layout.addSpacing(16)
+        div3 = QFrame()
+        div3.setObjectName("side_divider")
+        div3.setFixedHeight(1)
+        layout.addWidget(div3)
+        layout.addSpacing(10)
+
+        resources_header = QLabel("ROTATION RESOURCES")
+        resources_header.setObjectName("side_section")
+        layout.addWidget(resources_header)
+        layout.addSpacing(4)
+
+        one45_link = QLabel(
+            '<a href="https://uthscsa.one45.com">One45 — Evaluations & shift cards</a>'
+        )
+        one45_link.setObjectName("side_item")
+        one45_link.setOpenExternalLinks(True)
+        layout.addWidget(one45_link)
+
+        canvas_link = QLabel(
+            '<a href="https://uthscsa.instructure.com/login/ldap">Canvas — Course materials & modules</a>'
+        )
+        canvas_link.setObjectName("side_item")
+        canvas_link.setOpenExternalLinks(True)
+        layout.addWidget(canvas_link)
 
         layout.addStretch()
         self.side_scroll.setWidget(panel)
