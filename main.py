@@ -9,6 +9,7 @@ import json
 import subprocess
 import os
 from datetime import datetime, date
+from math import ceil
 from pathlib import Path
 
 from PyQt6.QtWidgets import (
@@ -235,6 +236,54 @@ QLabel#empty {
     font-size: 14px;
     font-weight: 500;
 }
+
+/* ── Side panel ── */
+QFrame#side_panel {
+    background: #0D1117;
+    border-left: 1px solid #21262D;
+}
+QLabel#side_title {
+    color: #F0F6FC;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+QLabel#side_shift_count {
+    color: #8B949E;
+    font-size: 12px;
+    font-weight: 500;
+}
+QLabel#side_section {
+    color: #6E7681;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+QLabel#side_item {
+    color: #C9D1D9;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 1px 0px;
+}
+QLabel#side_item_done {
+    color: #484F58;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 1px 0px;
+}
+QLabel#side_reminder {
+    color: #F39C12;
+    font-size: 12px;
+    font-weight: 500;
+}
+QLabel#side_allclear {
+    color: #238636;
+    font-size: 12px;
+    font-weight: 500;
+}
+QFrame#side_divider {
+    background: #21262D;
+}
 """
 
 
@@ -445,11 +494,32 @@ class MainWindow(QMainWindow):
 
         root.addWidget(tab_bar)
 
-        # ── Scroll area ──
+        # ── Body: scroll area + side panel ──
+        body = QWidget()
+        body_layout = QHBoxLayout(body)
+        body_layout.setContentsMargins(0, 0, 0, 0)
+        body_layout.setSpacing(0)
+
         self.scroll = QScrollArea()
         self.scroll.setWidgetResizable(True)
         self.scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        root.addWidget(self.scroll)
+        body_layout.addWidget(self.scroll, 1)
+
+        # Side panel
+        self.side_panel = QFrame()
+        self.side_panel.setObjectName("side_panel")
+        self.side_panel.setFixedWidth(280)
+        self.side_scroll = QScrollArea()
+        self.side_scroll.setWidgetResizable(True)
+        self.side_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.side_scroll.setStyleSheet("border: none; background: transparent;")
+        sp_layout = QVBoxLayout(self.side_panel)
+        sp_layout.setContentsMargins(0, 0, 0, 0)
+        sp_layout.setSpacing(0)
+        sp_layout.addWidget(self.side_scroll)
+        body_layout.addWidget(self.side_panel)
+
+        root.addWidget(body)
 
         self._refresh()
 
@@ -578,12 +648,208 @@ class MainWindow(QMainWindow):
         layout.addStretch()
         self.scroll.setWidget(container)
 
+        # Update side panel
+        self._build_side_panel()
+
         # Restore scroll position after layout settles
         QTimer.singleShot(0, lambda: self.scroll.verticalScrollBar().setValue(scroll_pos))
 
     def _toggle_category(self, key):
         self.collapsed[key] = not self.collapsed.get(key, True)
         self._refresh()
+
+    # ── Recommendation engine ──
+    def _get_recommendations(self):
+        """Analyze progress and generate per-shift focus suggestions."""
+        tasks = self.data.tasks
+
+        # Count remaining clinical shifts (not nursing)
+        clinical_shifts = [
+            t for t in tasks
+            if t["category"] == "Clinical Shifts" and t["title"] != "Nursing Shift"
+        ]
+        shifts_remaining = sum(
+            1 for t in clinical_shifts if not t["completed"]
+        )
+        shifts_done = len(clinical_shifts) - shifts_remaining
+
+        # Incomplete encounters
+        encounters = [
+            t for t in tasks
+            if t["category"] == "Required Encounters (9 of 10)" and not t["completed"]
+        ]
+        # Incomplete clinical skills
+        skills = [
+            t for t in tasks
+            if t["category"] == "Required Clinical Skills" and not t["completed"]
+        ]
+
+        # How many encounters still needed (9 of 10 required, so need 9 - completed)
+        enc_total = len([t for t in tasks if t["category"] == "Required Encounters (9 of 10)"])
+        enc_done = enc_total - len(encounters)
+        enc_needed = max(9 - enc_done, 0)
+
+        # Skills all required
+        skills_needed = len(skills)
+
+        # Distribute across remaining shifts
+        if shifts_remaining > 0:
+            enc_per_shift = ceil(enc_needed / shifts_remaining) if enc_needed else 0
+            skills_per_shift = ceil(skills_needed / shifts_remaining) if skills_needed else 0
+        else:
+            enc_per_shift = 0
+            skills_per_shift = 0
+
+        # Pick the top items for next shift
+        next_encounters = [t["title"] for t in encounters[:max(enc_per_shift, 1)]]
+        next_skills = [t["title"] for t in skills[:max(skills_per_shift, 1)]]
+
+        # Check pending evals and other reminders
+        reminders = []
+
+        # CDM / Shift Card reminders: any shift where attend is done but CDM or eval isn't
+        for t in clinical_shifts:
+            if t["completed"]:
+                continue
+            subs = t.get("subtasks", [])
+            attend_done = any(s["done"] for s in subs if "Attend" in s["label"] or "shift" in s["label"].lower())
+            if attend_done:
+                for s in subs:
+                    if not s["done"] and s["label"] != "Attend shift":
+                        reminders.append(f"{t['title']}: {s['label']}")
+
+        # Nursing shift: check if vital signs or eval pending after attend
+        nursing = next((t for t in tasks if t["title"] == "Nursing Shift"), None)
+        if nursing and not nursing["completed"]:
+            subs = nursing.get("subtasks", [])
+            attend_done = any(s["done"] for s in subs if "Attend" in s["label"])
+            if attend_done:
+                for s in subs:
+                    if not s["done"] and "Attend" not in s["label"]:
+                        reminders.append(f"Nursing Shift: {s['label']}")
+
+        # Direct observation reminder
+        obs = next((t for t in tasks if "Direct Observation" in t.get("title", "")), None)
+        if obs and not obs["completed"]:
+            pending_subs = [s for s in obs["subtasks"] if not s["done"]]
+            if pending_subs:
+                reminders.append(f"Direct Obs: {pending_subs[0]['label']}")
+
+        return {
+            "shifts_done": shifts_done,
+            "shifts_remaining": shifts_remaining,
+            "shifts_total": len(clinical_shifts),
+            "enc_needed": enc_needed,
+            "enc_done": enc_done,
+            "skills_needed": skills_needed,
+            "next_encounters": next_encounters,
+            "next_skills": next_skills,
+            "reminders": reminders,
+            "all_enc_done": enc_needed == 0,
+            "all_skills_done": skills_needed == 0,
+        }
+
+    def _build_side_panel(self):
+        """Build the side panel content with shift recommendations."""
+        rec = self._get_recommendations()
+
+        panel = QWidget()
+        layout = QVBoxLayout(panel)
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(6)
+
+        # Title
+        title = QLabel("Next Shift Focus")
+        title.setObjectName("side_title")
+        layout.addWidget(title)
+
+        # Shift count
+        sc = QLabel(f"Shift {rec['shifts_done'] + 1} of {rec['shifts_total']}  \u2022  {rec['shifts_remaining']} remaining")
+        sc.setObjectName("side_shift_count")
+        layout.addWidget(sc)
+
+        layout.addSpacing(12)
+
+        # Divider
+        div = QFrame()
+        div.setObjectName("side_divider")
+        div.setFixedHeight(1)
+        layout.addWidget(div)
+
+        layout.addSpacing(10)
+
+        # ── Encounters section ──
+        enc_header = QLabel("ENCOUNTERS TO LOOK FOR")
+        enc_header.setObjectName("side_section")
+        layout.addWidget(enc_header)
+        layout.addSpacing(4)
+
+        if rec["all_enc_done"]:
+            done_label = QLabel("\u2713  All encounters completed!")
+            done_label.setObjectName("side_allclear")
+            layout.addWidget(done_label)
+        else:
+            for name in rec["next_encounters"]:
+                item = QLabel(f"\u2022  {name}")
+                item.setObjectName("side_item")
+                item.setWordWrap(True)
+                layout.addWidget(item)
+            if rec["enc_needed"] > len(rec["next_encounters"]):
+                more = rec["enc_needed"] - len(rec["next_encounters"])
+                extra = QLabel(f"   + {more} more across future shifts")
+                extra.setObjectName("side_shift_count")
+                layout.addWidget(extra)
+
+        layout.addSpacing(12)
+
+        # ── Skills section ──
+        skill_header = QLabel("SKILLS TO ATTEMPT")
+        skill_header.setObjectName("side_section")
+        layout.addWidget(skill_header)
+        layout.addSpacing(4)
+
+        if rec["all_skills_done"]:
+            done_label = QLabel("\u2713  All skills completed!")
+            done_label.setObjectName("side_allclear")
+            layout.addWidget(done_label)
+        else:
+            for name in rec["next_skills"]:
+                item = QLabel(f"\u2022  {name}")
+                item.setObjectName("side_item")
+                item.setWordWrap(True)
+                layout.addWidget(item)
+            if rec["skills_needed"] > len(rec["next_skills"]):
+                more = rec["skills_needed"] - len(rec["next_skills"])
+                extra = QLabel(f"   + {more} more across future shifts")
+                extra.setObjectName("side_shift_count")
+                layout.addWidget(extra)
+
+        # ── Reminders ──
+        if rec["reminders"]:
+            layout.addSpacing(12)
+            div2 = QFrame()
+            div2.setObjectName("side_divider")
+            div2.setFixedHeight(1)
+            layout.addWidget(div2)
+            layout.addSpacing(10)
+
+            rem_header = QLabel("PENDING FOLLOW-UPS")
+            rem_header.setObjectName("side_section")
+            layout.addWidget(rem_header)
+            layout.addSpacing(4)
+
+            for r in rec["reminders"][:6]:
+                item = QLabel(f"\u26A0  {r}")
+                item.setObjectName("side_reminder")
+                item.setWordWrap(True)
+                layout.addWidget(item)
+            if len(rec["reminders"]) > 6:
+                more = QLabel(f"   + {len(rec['reminders']) - 6} more")
+                more.setObjectName("side_shift_count")
+                layout.addWidget(more)
+
+        layout.addStretch()
+        self.side_scroll.setWidget(panel)
 
     # ── System tray ──
     def _setup_tray(self):
