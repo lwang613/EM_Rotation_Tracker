@@ -340,7 +340,7 @@
     "subtasks": [
       {
         "label": "Attend lab",
-        "done": false
+        "done": true
       },
       {
         "label": "Canvas Eval",
