@@ -207,7 +207,7 @@
     "subtasks": [
       {
         "label": "Attend nursing shift",
-        "done": true
+        "done": false
       },
       {
         "label": "Nursing Shift Eval Card \u2192 Canvas",
