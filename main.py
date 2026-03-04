@@ -563,20 +563,10 @@ class MainWindow(QMainWindow):
         self.btn_pending.setText(f"Not Completed  ({pending_count})")
         self.btn_completed.setText(f"Completed  ({completed_count})")
 
-        # Build content — centered with max-width
         container = QWidget()
-        container_outer = QHBoxLayout(container)
-        container_outer.setContentsMargins(0, 0, 0, 0)
-        container_outer.addStretch()
-        content_inner = QWidget()
-        # Match header width so category containers have enough
-        # horizontal room for longer names without truncation.
-        content_inner.setMaximumWidth(960)
-        layout = QVBoxLayout(content_inner)
+        layout = QVBoxLayout(container)
         layout.setContentsMargins(32, 20, 32, 32)
         layout.setSpacing(8)
-        container_outer.addWidget(content_inner)
-        container_outer.addStretch()
 
         show_done = self.current_tab == "completed"
 
