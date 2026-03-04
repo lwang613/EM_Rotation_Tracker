@@ -25,6 +25,7 @@ from PyQt6.QtGui import (
 # ── Constants ─────────────────────────────────────────────────────────────────
 APP_NAME = "EMED 3005 Tracker"
 DATA_FILE = Path(__file__).parent / "tasks.json"
+DEFAULT_DATA_FILE = Path(__file__).parent / "tasks_default.json"
 
 CATEGORIES = [
     "Clinical Shifts",
@@ -309,6 +310,11 @@ class DataManager:
 
     def _load(self):
         if self._path.exists():
+            with open(self._path, "r") as f:
+                return json.load(f)
+        if DEFAULT_DATA_FILE.exists():
+            import shutil
+            shutil.copy2(DEFAULT_DATA_FILE, self._path)
             with open(self._path, "r") as f:
                 return json.load(f)
         return []
