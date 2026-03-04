@@ -1,0 +1,698 @@
+[
+  {
+    "id": 1,
+    "title": "Clinical Shift 1",
+    "category": "Clinical Shifts",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Clinical Shift 2",
+    "category": "Clinical Shifts",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Clinical Shift 3",
+    "category": "Clinical Shifts",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Clinical Shift 4",
+    "category": "Clinical Shifts",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Clinical Shift 5",
+    "category": "Clinical Shifts",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Clinical Shift 6",
+    "category": "Clinical Shifts",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Clinical Shift 7",
+    "category": "Clinical Shifts",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Clinical Shift 8",
+    "category": "Clinical Shifts",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Clinical Shift 9",
+    "category": "Clinical Shifts",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Clinical Shift 10",
+    "category": "Clinical Shifts",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend shift",
+        "done": false
+      },
+      {
+        "label": "CDM Worksheet \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Shift Card Eval \u2192 One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Nursing Shift",
+    "category": "Clinical Shifts",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend nursing shift",
+        "done": false
+      },
+      {
+        "label": "Vital signs assessment",
+        "done": false
+      },
+      {
+        "label": "Nursing Shift Eval Card \u2192 Canvas",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Grand Rounds 1",
+    "category": "Didactics & Sessions",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Grand Rounds 2",
+    "category": "Didactics & Sessions",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Grand Rounds 3",
+    "category": "Didactics & Sessions",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Didactics — Abdominal Pain",
+    "category": "Didactics & Sessions",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Pre-reading",
+        "done": false
+      },
+      {
+        "label": "Case preparation",
+        "done": false
+      },
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Didactics — Chest Pain",
+    "category": "Didactics & Sessions",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Pre-reading",
+        "done": false
+      },
+      {
+        "label": "Case preparation",
+        "done": false
+      },
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Didactics — Shortness of Breath",
+    "category": "Didactics & Sessions",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Pre-reading",
+        "done": false
+      },
+      {
+        "label": "Case preparation",
+        "done": false
+      },
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Didactics — Deadly Dysrhythmias",
+    "category": "Didactics & Sessions",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Synthesis Shock",
+    "category": "Didactics & Sessions",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend session",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Simulation Lab",
+    "category": "Labs & Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend sim lab",
+        "done": false
+      },
+      {
+        "label": "Student Eval \u2192 Canvas",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Procedure / Suture Lab",
+    "category": "Labs & Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend lab",
+        "done": false
+      },
+      {
+        "label": "Canvas Eval",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Ultrasound FAST Lab",
+    "category": "Labs & Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Pre-test \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Attend lab",
+        "done": false
+      },
+      {
+        "label": "Post-test \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "Canvas Eval",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Direct Observation \u2014 History Taking",
+    "category": "Labs & Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Perform observed history in ED",
+        "done": false
+      },
+      {
+        "label": "Attending fills out form",
+        "done": false
+      },
+      {
+        "label": "Upload form \u2192 Canvas",
+        "done": false
+      },
+      {
+        "label": "One45 form",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "EM Resident Evaluation 1",
+    "category": "Evaluations & Assessments",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Send eval in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "EM Resident Evaluation 2",
+    "category": "Evaluations & Assessments",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Send eval in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Mid-Rotation Quiz",
+    "category": "Evaluations & Assessments",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Complete quiz \u2192 Canvas",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Shelf Exam Review",
+    "category": "Evaluations & Assessments",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Attend review session",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "NBME EM Shelf Exam",
+    "category": "Evaluations & Assessments",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Take exam",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "title": "Abdominal Pain",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "title": "Altered Mental Status",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "title": "Chest Pain",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "title": "Gastrointestinal Bleeding",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "title": "Headache",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "title": "Liver Failure / Severe Biliary Disease",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "title": "Poisoning / Toxic Ingestion",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "title": "Psychiatric Emergency",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "title": "Shock",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "title": "Shortness of Breath",
+    "category": "Required Encounters (9 of 10)",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "title": "Central Venous Line Placement",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "title": "EKG Acquisition",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "title": "Endotracheal Intubation",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "title": "Foley Catheter Placement",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "title": "Fracture Reduction / Splint",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "title": "Intravenous Line Placement",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "title": "Simple Laceration Repair",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "title": "Ultrasound-Guided IV Line Placement",
+    "category": "Required Clinical Skills",
+    "completed": false,
+    "subtasks": [
+      {
+        "label": "Log in One45",
+        "done": false
+      }
+    ]
+  }
+]
