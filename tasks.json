@@ -483,14 +483,13 @@
     "id": 102,
     "title": "Chest Pain",
     "category": "Required Encounters (9 of 10)",
-    "completed": true,
+    "completed": false,
     "subtasks": [
       {
         "label": "Log in One45",
-        "done": true
+        "done": false
       }
-    ],
-    "completed_date": "2026-03-04"
+    ]
   },
   {
     "id": 103,
