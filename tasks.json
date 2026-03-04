@@ -42,8 +42,8 @@
     "notes": "Arrive on time. On Wednesdays with Grand Rounds: leave shift at 1pm to keep 10-hour break and avoid duty hour violations.",
     "target": 10,
     "count": 0,
-    "completed": true,
-    "completed_date": "2026-03-04"
+    "completed": false,
+    "completed_date": null
   },
   {
     "id": 5,
