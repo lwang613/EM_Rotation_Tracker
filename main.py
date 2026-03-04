@@ -700,9 +700,9 @@ class MainWindow(QMainWindow):
             enc_per_shift = 0
             skills_per_shift = 0
 
-        # Pick the top items for next shift
-        next_encounters = [t["title"] for t in encounters[:max(enc_per_shift, 1)]]
-        next_skills = [t["title"] for t in skills[:max(skills_per_shift, 1)]]
+        # Always show up to 5 incomplete items in the side panel
+        next_encounters = [t["title"] for t in encounters[:5]]
+        next_skills = [t["title"] for t in skills[:5]]
 
         # Check pending evals and other reminders
         reminders = []
@@ -796,7 +796,7 @@ class MainWindow(QMainWindow):
                 layout.addWidget(item)
             if rec["enc_needed"] > len(rec["next_encounters"]):
                 more = rec["enc_needed"] - len(rec["next_encounters"])
-                extra = QLabel(f"   + {more} more across future shifts")
+                extra = QLabel(f"   + {more} more remaining")
                 extra.setObjectName("side_shift_count")
                 layout.addWidget(extra)
 
@@ -820,7 +820,7 @@ class MainWindow(QMainWindow):
                 layout.addWidget(item)
             if rec["skills_needed"] > len(rec["next_skills"]):
                 more = rec["skills_needed"] - len(rec["next_skills"])
-                extra = QLabel(f"   + {more} more across future shifts")
+                extra = QLabel(f"   + {more} more remaining")
                 extra.setObjectName("side_shift_count")
                 layout.addWidget(extra)
 
