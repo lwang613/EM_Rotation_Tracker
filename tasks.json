@@ -210,6 +210,10 @@
         "done": false
       },
       {
+        "label": "Vital signs assessment",
+        "done": false
+      },
+      {
         "label": "Nursing Shift Eval Card \u2192 Canvas",
         "done": false
       }
@@ -453,8 +457,8 @@
   },
   {
     "id": 100,
-    "title": "Chest Pain",
-    "category": "Required Encounters",
+    "title": "Abdominal Pain",
+    "category": "Required Encounters (9 of 10)",
     "completed": false,
     "subtasks": [
       {
@@ -465,8 +469,8 @@
   },
   {
     "id": 101,
-    "title": "Shortness of Breath",
-    "category": "Required Encounters",
+    "title": "Altered Mental Status",
+    "category": "Required Encounters (9 of 10)",
     "completed": false,
     "subtasks": [
       {
@@ -477,8 +481,8 @@
   },
   {
     "id": 102,
-    "title": "Abdominal Pain",
-    "category": "Required Encounters",
+    "title": "Chest Pain",
+    "category": "Required Encounters (9 of 10)",
     "completed": false,
     "subtasks": [
       {
@@ -489,8 +493,8 @@
   },
   {
     "id": 103,
-    "title": "Altered Mental Status",
-    "category": "Required Encounters",
+    "title": "Gastrointestinal Bleeding",
+    "category": "Required Encounters (9 of 10)",
     "completed": false,
     "subtasks": [
       {
@@ -501,8 +505,8 @@
   },
   {
     "id": 104,
-    "title": "Wound Care / Laceration Repair",
-    "category": "Required Encounters",
+    "title": "Headache",
+    "category": "Required Encounters (9 of 10)",
     "completed": false,
     "subtasks": [
       {
@@ -513,8 +517,8 @@
   },
   {
     "id": 105,
-    "title": "Fracture / Dislocation / Sprain",
-    "category": "Required Encounters",
+    "title": "Liver Failure / Severe Biliary Disease",
+    "category": "Required Encounters (9 of 10)",
     "completed": false,
     "subtasks": [
       {
@@ -525,8 +529,8 @@
   },
   {
     "id": 106,
-    "title": "Minor Trauma",
-    "category": "Required Encounters",
+    "title": "Poisoning / Toxic Ingestion",
+    "category": "Required Encounters (9 of 10)",
     "completed": false,
     "subtasks": [
       {
@@ -537,8 +541,8 @@
   },
   {
     "id": 107,
-    "title": "Major Trauma / Resuscitation",
-    "category": "Required Encounters",
+    "title": "Psychiatric Emergency",
+    "category": "Required Encounters (9 of 10)",
     "completed": false,
     "subtasks": [
       {
@@ -549,8 +553,8 @@
   },
   {
     "id": 108,
-    "title": "Pediatric Emergency",
-    "category": "Required Encounters",
+    "title": "Shock",
+    "category": "Required Encounters (9 of 10)",
     "completed": false,
     "subtasks": [
       {
@@ -561,44 +565,8 @@
   },
   {
     "id": 109,
-    "title": "OB/GYN Emergency",
-    "category": "Required Encounters",
-    "completed": false,
-    "subtasks": [
-      {
-        "label": "Log in One45",
-        "done": false
-      }
-    ]
-  },
-  {
-    "id": 110,
-    "title": "Psychiatric Emergency",
-    "category": "Required Encounters",
-    "completed": false,
-    "subtasks": [
-      {
-        "label": "Log in One45",
-        "done": false
-      }
-    ]
-  },
-  {
-    "id": 111,
-    "title": "Toxicologic Emergency",
-    "category": "Required Encounters",
-    "completed": false,
-    "subtasks": [
-      {
-        "label": "Log in One45",
-        "done": false
-      }
-    ]
-  },
-  {
-    "id": 112,
-    "title": "Ophthalmologic Emergency",
-    "category": "Required Encounters",
+    "title": "Shortness of Breath",
+    "category": "Required Encounters (9 of 10)",
     "completed": false,
     "subtasks": [
       {
@@ -609,21 +577,20 @@
   },
   {
     "id": 200,
-    "title": "Suturing",
-    "category": "Required Procedures",
-    "completed": true,
+    "title": "Central Venous Line Placement",
+    "category": "Required Clinical Skills",
+    "completed": false,
     "subtasks": [
       {
         "label": "Log in One45",
-        "done": true
+        "done": false
       }
-    ],
-    "completed_date": "2026-03-04"
+    ]
   },
   {
     "id": 201,
-    "title": "Splinting",
-    "category": "Required Procedures",
+    "title": "EKG Acquisition",
+    "category": "Required Clinical Skills",
     "completed": false,
     "subtasks": [
       {
@@ -634,21 +601,20 @@
   },
   {
     "id": 202,
-    "title": "IV Access",
-    "category": "Required Procedures",
-    "completed": true,
+    "title": "Endotracheal Intubation",
+    "category": "Required Clinical Skills",
+    "completed": false,
     "subtasks": [
       {
         "label": "Log in One45",
-        "done": true
+        "done": false
       }
-    ],
-    "completed_date": "2026-03-04"
+    ]
   },
   {
     "id": 203,
-    "title": "Incision & Drainage",
-    "category": "Required Procedures",
+    "title": "Foley Catheter Placement",
+    "category": "Required Clinical Skills",
     "completed": false,
     "subtasks": [
       {
@@ -659,8 +625,8 @@
   },
   {
     "id": 204,
-    "title": "Arterial Blood Gas",
-    "category": "Required Procedures",
+    "title": "Fracture Reduction / Splint",
+    "category": "Required Clinical Skills",
     "completed": false,
     "subtasks": [
       {
@@ -671,8 +637,8 @@
   },
   {
     "id": 205,
-    "title": "Intubation (or assist)",
-    "category": "Required Procedures",
+    "title": "Intravenous Line Placement",
+    "category": "Required Clinical Skills",
     "completed": false,
     "subtasks": [
       {
@@ -683,104 +649,21 @@
   },
   {
     "id": 206,
-    "title": "Lumbar Puncture (or assist)",
-    "category": "Required Procedures",
-    "completed": false,
+    "title": "Simple Laceration Repair",
+    "category": "Required Clinical Skills",
+    "completed": true,
     "subtasks": [
       {
         "label": "Log in One45",
-        "done": false
+        "done": true
       }
-    ]
+    ],
+    "completed_date": "2026-03-04"
   },
   {
     "id": 207,
-    "title": "Central Line (or assist)",
-    "category": "Required Procedures",
-    "completed": false,
-    "subtasks": [
-      {
-        "label": "Log in One45",
-        "done": false
-      }
-    ]
-  },
-  {
-    "id": 208,
-    "title": "Chest Tube (or assist)",
-    "category": "Required Procedures",
-    "completed": false,
-    "subtasks": [
-      {
-        "label": "Log in One45",
-        "done": false
-      }
-    ]
-  },
-  {
-    "id": 209,
-    "title": "Focused Assessment (FAST exam)",
-    "category": "Required Procedures",
-    "completed": false,
-    "subtasks": [
-      {
-        "label": "Log in One45",
-        "done": false
-      }
-    ]
-  },
-  {
-    "id": 300,
-    "title": "Complete History & Physical \u2014 Patient 1",
-    "category": "History & Physical Exams",
-    "completed": false,
-    "subtasks": [
-      {
-        "label": "Log in One45",
-        "done": false
-      }
-    ]
-  },
-  {
-    "id": 301,
-    "title": "Complete History & Physical \u2014 Patient 2",
-    "category": "History & Physical Exams",
-    "completed": false,
-    "subtasks": [
-      {
-        "label": "Log in One45",
-        "done": false
-      }
-    ]
-  },
-  {
-    "id": 302,
-    "title": "Focused History & Physical \u2014 Patient 1",
-    "category": "History & Physical Exams",
-    "completed": false,
-    "subtasks": [
-      {
-        "label": "Log in One45",
-        "done": false
-      }
-    ]
-  },
-  {
-    "id": 303,
-    "title": "Focused History & Physical \u2014 Patient 2",
-    "category": "History & Physical Exams",
-    "completed": false,
-    "subtasks": [
-      {
-        "label": "Log in One45",
-        "done": false
-      }
-    ]
-  },
-  {
-    "id": 304,
-    "title": "Focused History & Physical \u2014 Patient 3",
-    "category": "History & Physical Exams",
+    "title": "Ultrasound-Guided IV Line Placement",
+    "category": "Required Clinical Skills",
     "completed": false,
     "subtasks": [
       {
