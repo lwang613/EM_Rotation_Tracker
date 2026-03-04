@@ -359,7 +359,7 @@
       },
       {
         "label": "Attend lab",
-        "done": false
+        "done": true
       },
       {
         "label": "Post-test \u2192 Canvas",
